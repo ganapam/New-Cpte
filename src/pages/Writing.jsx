@@ -1,8 +1,10 @@
 import React from 'react';
 import { ImPencil } from "react-icons/im";
 import { Box, Flex, Heading, Text, Textarea, useColorModeValue } from "@chakra-ui/react"
+import Footer from '../components/Footer/Footer';
 export const Writing = () => {
   return (
+    <div>
     <Box w={'100%'} pt={{ base: '100px', md: 0, lg: 0 }}>
       <Flex bg={useColorModeValue('black', 'black.900')} flexDirection={'row'} p={'20px'} align={'center'}>
         <ImPencil color={'white'} />
@@ -28,5 +30,7 @@ export const Writing = () => {
         />
       </Box>
     </Box >
+    <Footer/>
+    </div>
   )
 }

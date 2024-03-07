@@ -3,7 +3,7 @@ import { Flex, useColorModeValue, Box, Text, Tabs, Tab, TabPanels, TabPanel, Tab
 import Card from "../components/Card/Card"
 import CardBody from "../components/Card/CardBody"
 import SearchTable2 from "../components/Tables/SearchTable2"
-
+import Footer from "../components/Footer/Footer"
 export const Speaking = () => {
   const tableData2 = [
     {
@@ -58,6 +58,7 @@ export const Speaking = () => {
     },
   ];
   return (
+    <div>
     <Flex direction='column' pt={{ sm: '125px', md: '20px' }}>
       <Text
         transition={'all .3s ease'}
@@ -96,5 +97,7 @@ export const Speaking = () => {
         </Tabs>
       </Box>
     </Flex>
+    <Footer/>
+    </div>
   )
 }

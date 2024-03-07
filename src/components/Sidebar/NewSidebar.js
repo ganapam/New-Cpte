@@ -19,14 +19,17 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { ImHeadphones, ImPencil } from "react-icons/im";
 import { BiUserVoice } from "react-icons/bi";
 import { FaBookOpenReader } from "react-icons/fa6";
+import { RiFileTextLine } from "react-icons/ri";
 import Navbar from '../Navbar/Navbar'
 
 const LinkItems = [
-  { name: 'Home', icon: FiHome, navLink: '/home' },
-  { name: 'Speaking', icon: BiUserVoice, navLink: 'pte-speaking' },
-  { name: 'Listening', icon: ImHeadphones, navLink: 'pte-listening' },
-  { name: 'Reading', icon: FaBookOpenReader, navLink: 'pte-reading' },
-  { name: 'Writing', icon: ImPencil, navLink: 'pte-wrting' },
+  { name: 'Home', icon: FiHome, navLink: '/' },
+  { name: 'Speaking', icon: BiUserVoice, navLink: '/pte-speaking' },
+  { name: 'Listening', icon: ImHeadphones, navLink: '/pte-listening' },
+  { name: 'Reading', icon: FaBookOpenReader, navLink: '/pte-reading' },
+  { name: 'Writing', icon: ImPencil, navLink: '/pte-writing' },
+  { name: 'RW', icon: RiFileTextLine, navLink: '/rw' },
+  { name: 'RE', icon: RiFileTextLine, navLink: '/re' },
 ]
 
 export const NewSidebar = () => {

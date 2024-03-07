@@ -24,7 +24,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import logo from '../../logo-main.svg'
-
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -53,7 +53,9 @@ export default function Navbar() {
           />
         </Flex>
         <Flex align={'center'} flex = {{ base:1 }}  ml={'65'} justify={{ base: 'left', md: 'left', sm: 'left' }}>
-          <Image align={useBreakpointValue({ base: 'left', md: 'left' })}  src={logo} href="/"/>
+        <Link to="/">
+            <Image align={useBreakpointValue({ base: 'left', md: 'left' })} src={logo} alt="Logo" />
+          </Link>
           <Flex justifyContent ='center' display={{ base: 'none', md: 'flex' }}  ml={'150'} >
             <DesktopNav />
           </Flex>
@@ -236,7 +238,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'About Us',
-    href: '#',
+    href: '/aboutus',
   },
   {
     label: 'Contact Us',

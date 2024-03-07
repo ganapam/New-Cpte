@@ -56,8 +56,8 @@ import {
 function SearchTable2(props) {
   const { columnsData, tableData } = props;
 
-  const columns = useMemo(() => columnsData, []);
-  const data = useMemo(() => tableData, []);
+  const columns = useMemo(() => columnsData, [columnsData]);
+  const data = useMemo(() => tableData, [tableData]);
 
   const tableInstance = useTable(
     {
@@ -81,7 +81,6 @@ function SearchTable2(props) {
     previousPage,
     canNextPage,
     canPreviousPage,
-    setPageSize,
     setGlobalFilter,
     state,
   } = tableInstance;
@@ -96,7 +95,7 @@ function SearchTable2(props) {
     return arrPageCount;
   };
 
-  const { pageIndex, pageSize, globalFilter } = state;
+  const { pageIndex, pageSize} = state;
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { Container, Heading, Text, Button, Flex, Input } from "@chakra-ui/react"
 import React from "react"
-
+import Footer from "../components/Footer/Footer"
 export const Reading = () => {
   return (
     <div>
@@ -31,6 +31,7 @@ export const Reading = () => {
           <Button size={'lg'} colorScheme="messenger">Suffered</Button>
         </Flex>
       </Container>
+      <Footer/>
     </div>
   )
 }

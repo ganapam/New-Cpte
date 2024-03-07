@@ -1,7 +1,7 @@
 import { Button, Container, Flex, Heading, Text, Textarea } from "@chakra-ui/react"
 import React from "react"
 import { ImHeadphones } from "react-icons/im";
-
+import Footer from "../components/Footer/Footer";
 export const Listening = () => {
   return (
     <div>
@@ -37,6 +37,7 @@ export const Listening = () => {
           <Button size={'md'} bg={'#000000'} color={'#ffffff'}>Paste</Button>
         </Flex>
       </Container>
+      <Footer/>
     </div>
   )
 }

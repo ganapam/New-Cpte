@@ -54,6 +54,7 @@ const Card = ({ heading, description, icon, href, ...rest }) => {
 
 export default function AboutUs() {
     return (
+        <div>
         <Box p={4}>
             <Flex justify="center" align="center" w={'full'}>
                 <Stack spacing={3} as={Container} maxW={'1xl'}>
@@ -103,5 +104,6 @@ export default function AboutUs() {
                 </Container>
             </Flex>
         </Box>
+        </div>
     )
 }

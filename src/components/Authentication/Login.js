@@ -18,9 +18,14 @@ import {
 import { useState } from 'react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import logo from '../../logo-main.svg'
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate('/');
+  };
 
   return (
     <Flex
@@ -70,18 +75,19 @@ export default function Login() {
               <Text textAlign={'center'} textDecoration={'underline'}>Did you forgot your password</Text>
             </Stack>
             <Stack spacing={10} pt={2}>
-              <Button
-                loadingText="Submitting"
-                size="lg"
-                bg={'black'}
-                fontWeight={400}
-                color={'white'}
-                textTransform={'uppercase'}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
-                Login
-              </Button>
+            <Button
+      loadingText="Submitting"
+      size="lg"
+      bg={'black'}
+      fontWeight={400}
+      color={'white'}
+      textTransform={'uppercase'}
+      _hover={{
+        bg: 'blue.500',
+      }}
+      onClick={handleLogin}>
+      Login
+    </Button>
             </Stack>
           </Stack>
         </Box>
